@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+body {
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* cursor: none; */
+}
+/* #no-scroll {
+  overflow: hidden;
+  height: 100vh;
+} */
+.bck{
+  background-color: black;
+
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#preloader .rotating-image {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: rotation 16s linear infinite; /* Increase animation duration to 4 seconds */
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%; /* Set the background size to 50% */
+}
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Handle */
+
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.911);
+  border-radius: 12px;
+} */
+
+.cursor {
+  background-color: #191919;
+  opacity: 0.6;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .cursor{
+    display: none;
+  }
+}
